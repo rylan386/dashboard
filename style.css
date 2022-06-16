@@ -1,0 +1,214 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    'sidebar header '
+    'sidebar main '
+    'sidebar main '
+    'sidebar main ';
+    grid-template-columns: 250px 1fr;
+}
+
+.sidebar {
+    background-color: #f3d2c1;
+    color: #001858;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    grid-area: sidebar;
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+}
+
+.home, .profile, .messages, .history, 
+.tasks, .communities {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+
+.settings, .support, .privacy {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.home, .settings {
+    margin-top: 3rem;
+}
+
+h1, h2 {
+    transition: .2s;
+}
+
+h1:hover, h2:hover, h2:hover, h2:hover, h2:hover, 
+h2:hover, h2:hover, h2:hover, h2:hover, h2:hover {
+   transform: scale(1.12);
+   cursor: pointer;
+}   
+
+span {
+    padding-right: 1rem;
+    font-weight: 100px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #eeeeee;
+    box-shadow: 2px 3px 5px 3px rgb(141, 141, 141);
+    color: #001858;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    grid-row: 2 / 3;
+    margin-left: 2rem;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+#astronaut {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+#search {
+    text-indent: 10px;
+    height: 30px;
+    flex: 1;
+    border-radius: 30px;
+    border:1px solid #001858;
+    font-size: 16px;
+    background-color: #eeeeee;
+}
+
+#search:focus-within {
+    box-shadow: 0px 0px 10px 3px #dcdcdc;
+    outline: none;
+}
+
+#search::-webkit-search-cancel-button { 
+    -webkit-appearance: none;
+}
+
+#icon-search:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: .1s;
+}
+
+#icon-notification:hover {
+    animation: shake .5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg);}
+    5% { transform: rotate(-4deg);}
+    10% { transform: rotate(-8deg);}
+    15% { transform: rotate(-4deg);} 
+    20% { transform: rotate(0deg);}
+    25% { transform: rotate(4deg);}
+    30% { transform: rotate(8deg);}
+    35% { transform: rotate(4deg);} 
+    40% { transform: rotate(0deg);}
+    45% { transform: rotate(-4deg);}
+    50% { transform: rotate(-8deg);}
+    55% { transform: rotate(-4deg);}
+    60% { transform: rotate(0deg);}
+    65% { transform: rotate(4deg);}
+    70% { transform: rotate(8deg);}
+    75% { transform: rotate(4deg);}
+    80% { transform: rotate(0deg);}
+    85% { transform: rotate(-4deg);}
+    90% { transform: rotate(-8deg);}
+    95% { transform: rotate(-4deg);}
+    100% { transform: rotate(0deg);}
+}
+
+
+.account {
+    font-size: 18px;
+    grid-column: 3 / 4;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    grid-column: 2 / 4;
+}
+
+button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+    border:1px solid #001858;
+    background-color: #f582ae;
+    cursor: pointer;
+    animation: .5s;
+    margin: 12px;
+    color: #001858;
+}
+
+button:hover {
+    transform: 1.1;
+    box-shadow: 0px 1px 2px 0px #000000;
+}
+
+button:focus {
+    border: 2px solid #5a5a5a;
+}
+
+.main {
+    display: grid;
+    background-color: #fef6e4;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-area: main;
+}
+
+.announcements {
+    background-color: #e45858;
+    grid-area: announcements
+}
+
+.trending {
+    background-color: #e45858;
+    grid-area: trending;
+}
