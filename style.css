@@ -188,6 +188,7 @@ button {
     animation: .5s;
     margin: 12px;
     color: #001858;
+    font-family: 'BIZ UDMincho', serif;
 }
 
 button:hover {
